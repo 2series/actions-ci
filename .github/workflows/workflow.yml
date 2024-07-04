@@ -53,3 +53,13 @@ jobs:
         name: model
         path: model.keras
     
+    - name: Create Release Artifacts
+      uses: 2series/github-upload-release-artifacts-action@v2
+      with:
+        repo_token: "${{ secrets.GITHUB_TOKEN }}"
+        automatic_release_tag: "latest"
+        prerelease: false
+        title: "Model"
+        files: |
+           model.keras
+    
