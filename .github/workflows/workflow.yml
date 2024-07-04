@@ -48,7 +48,7 @@ jobs:
         python main.py
 
     - name: Upload model.keras
-      uses: actions/upload-artifacts@v2
+      uses: 2series/github-actions/upload-artifacts@v2
       with:
         name: model
         path: model.keras
